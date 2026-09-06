@@ -28,11 +28,11 @@
     text-align: center;
   }
   header h1 {
-    margin: 0 0 4px;
+    margin: 0 0 8px;
     font-size: 1.4rem;
   }
   header p {
-    margin: 0;
+    margin: 2px 0;
     opacity: 0.85;
     font-size: 0.9rem;
   }
@@ -41,6 +41,13 @@
     margin: 0 auto;
     padding: 24px 20px 64px;
   }
+  .intro {
+    background: #fff;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+  }
   nav.toc {
     background: #fff;
     border: 1px solid var(--borde);
@@ -48,27 +55,40 @@
     padding: 16px 20px;
     margin-bottom: 32px;
   }
-  nav.toc p {
-    margin: 0 0 8px;
-    font-weight: 600;
+  nav.toc p.toc-title {
+    margin: 0 0 10px;
+    font-weight: 700;
+    color: var(--azul);
   }
+  nav.toc h4 {
+    margin: 14px 0 6px;
+    color: var(--azul);
+    font-size: 0.95rem;
+  }
+  nav.toc ol {
+    margin: 0;
+    padding-left: 20px;
+  }
+  nav.toc li { margin-bottom: 3px; }
   nav.toc a {
     color: var(--azul);
     text-decoration: none;
+    font-size: 0.92rem;
   }
   nav.toc a:hover { text-decoration: underline; }
+  .parte-titulo {
+    color: var(--azul);
+    font-size: 1.5rem;
+    margin: 40px 0 4px;
+    border-bottom: 3px solid var(--azul);
+    padding-bottom: 10px;
+  }
   section {
     background: #fff;
     border: 1px solid var(--borde);
     border-radius: 10px;
     padding: 8px 24px 24px;
-    margin-bottom: 24px;
-  }
-  h2 {
-    color: var(--azul);
-    font-size: 1.3rem;
-    border-bottom: 2px solid var(--fondo);
-    padding-bottom: 8px;
+    margin-bottom: 20px;
   }
   h3 {
     color: var(--azul);
@@ -78,7 +98,6 @@
   .meta {
     color: var(--texto-sec);
     font-size: 0.9rem;
-    margin-top: -8px;
   }
   ul { padding-left: 22px; }
   li { margin-bottom: 6px; }
@@ -97,32 +116,63 @@
 <body>
 
 <header>
-  <h1>AuditApp</h1>
-  <p>Política de Privacidad y Términos y Condiciones de Uso</p>
+  <h1>AuditApp — Política de Privacidad y Términos y Condiciones</h1>
+  <p>Última actualización: 6 de septiembre de 2026</p>
+  <p>Responsable: Miguel Ernesto Camarero · Contacto: <a href="mailto:auditapp.app@gmail.com" style="color:#fff;">auditapp.app@gmail.com</a></p>
 </header>
 
 <main>
+  <div class="intro">
+    <p style="margin:0;">Este documento contiene la Política de Privacidad y los Términos y Condiciones de uso de la aplicación AuditApp. Al descargar, instalar o utilizar la App, usted acepta ambos.</p>
+  </div>
+
   <nav class="toc">
-    <p>Contenido de esta página</p>
-    <a href="#privacidad">Política de Privacidad</a> &nbsp;·&nbsp;
-    <a href="#terminos">Términos y Condiciones de Uso</a>
+    <p class="toc-title">Índice</p>
+
+    <h4>Parte 1 — Política de Privacidad</h4>
+    <ol>
+      <li><a href="#priv-1">Quiénes somos y a quién está dirigida la App</a></li>
+      <li><a href="#priv-2">Qué información recopilamos</a></li>
+      <li><a href="#priv-3">Cómo utilizamos la información</a></li>
+      <li><a href="#priv-4">Dónde se almacena la información y quién la procesa</a></li>
+      <li><a href="#priv-5">Respaldo, pérdida de datos y responsabilidad del Usuario sobre las imágenes</a></li>
+      <li><a href="#priv-6">Permisos que utiliza la App</a></li>
+      <li><a href="#priv-7">Compartir información con terceros</a></li>
+      <li><a href="#priv-8">Sus derechos sobre sus datos</a></li>
+      <li><a href="#priv-9">Datos de menores</a></li>
+      <li><a href="#priv-10">Cambios en esta Política</a></li>
+      <li><a href="#priv-11">Contacto</a></li>
+    </ol>
+
+    <h4>Parte 2 — Términos y Condiciones de Uso</h4>
+    <ol>
+      <li><a href="#tyc-1">Objeto y naturaleza de la App</a></li>
+      <li><a href="#tyc-2">Registro y cuenta</a></li>
+      <li><a href="#tyc-3">Uso correcto de la App</a></li>
+      <li><a href="#tyc-4">Datos de terceros: responsabilidad del Usuario</a></li>
+      <li><a href="#tyc-5">Almacenamiento de datos, respaldo y pérdida de información</a></li>
+      <li><a href="#tyc-6">Disponibilidad del servicio</a></li>
+      <li><a href="#tyc-7">Limitación de responsabilidad</a></li>
+      <li><a href="#tyc-8">Propiedad intelectual</a></li>
+      <li><a href="#tyc-9">Costo y planes</a></li>
+      <li><a href="#tyc-10">Modificaciones de los Términos</a></li>
+      <li><a href="#tyc-11">Ley aplicable</a></li>
+      <li><a href="#tyc-12">Contacto</a></li>
+    </ol>
   </nav>
 
-  <section id="privacidad">
-    <h2>Política de Privacidad — AuditApp</h2>
-    <p class="meta">Última actualización: 6 de septiembre de 2026</p>
+  <h2 class="parte-titulo" id="parte1">Parte 1 — Política de Privacidad</h2>
 
+  <section>
     <p>Esta Política de Privacidad describe cómo AuditApp (en adelante, "la App", "nosotros") recopila, utiliza y protege la información de sus usuarios. La App es desarrollada y publicada por Miguel Ernesto Camarero (en adelante, "el Desarrollador").</p>
-
     <p>Al descargar, instalar o utilizar AuditApp, usted (en adelante, "el Usuario") acepta las prácticas descritas en esta política. Si no está de acuerdo con ella, por favor no utilice la App.</p>
-
     <p><strong>Contacto:</strong> Para cualquier consulta relacionada con esta política o con sus datos, puede escribir a: <a href="mailto:auditapp.app@gmail.com">auditapp.app@gmail.com</a></p>
 
-    <h3>1. Quiénes somos y a quién está dirigida la App</h3>
+    <h3 id="priv-1">1. Quiénes somos y a quién está dirigida la App</h3>
     <p>AuditApp es una herramienta profesional destinada a técnicos en Higiene y Seguridad en el Trabajo y, en general, a cualquier auditor que realice auditorías a empresas. La App permite gestionar clientes, llevar adelante auditorías de campo, registrar hallazgos y generar informes en formato PDF.</p>
     <p>La App está disponible actualmente para usuarios de países de habla hispana.</p>
 
-    <h3>2. Qué información recopilamos</h3>
+    <h3 id="priv-2">2. Qué información recopilamos</h3>
 
     <h3>2.1. Información de su cuenta (inicio de sesión con Google)</h3>
     <p>Para utilizar la App, el Usuario inicia sesión mediante su cuenta de Google. A través de este proceso, la App accede a información básica de su cuenta de Google, que puede incluir su nombre, dirección de correo electrónico y foto de perfil. Esta información se utiliza únicamente para identificar su cuenta, permitir el acceso a la App y asociar sus datos a su usuario.</p>
@@ -142,7 +192,7 @@
     <p>Durante una auditoría, el Usuario puede tomar fotografías o seleccionarlas de la galería de su dispositivo. También puede cargar imágenes como logo de cliente, logo de empresa, foto de perfil y firma.</p>
     <p>Las fotografías e imágenes <strong>NO</strong> se suben ni se respaldan en la nube. Se almacenan exclusivamente en el dispositivo del Usuario (en el almacenamiento interno de la App y, si el Usuario lo habilita, en la galería del dispositivo dentro de una carpeta llamada "AuditApp"). Ver la sección 5 para más detalles sobre las implicancias de esto.</p>
 
-    <h3>3. Cómo utilizamos la información</h3>
+    <h3 id="priv-3">3. Cómo utilizamos la información</h3>
     <p>Utilizamos la información recopilada para:</p>
     <ul>
       <li>Permitir el inicio de sesión y la identificación del Usuario.</li>
@@ -153,7 +203,7 @@
     </ul>
     <p>No vendemos, alquilamos ni cedemos su información personal ni la de terceros a otras empresas con fines comerciales o publicitarios.</p>
 
-    <h3>4. Dónde se almacena la información y quién la procesa</h3>
+    <h3 id="priv-4">4. Dónde se almacena la información y quién la procesa</h3>
 
     <h3>4.1. Datos en la nube (Google Firebase)</h3>
     <p>Los datos de texto (perfil, clientes, auditorías, recordatorios) se almacenan en Google Firebase (Cloud Firestore), un servicio de infraestructura provisto por Google. Estos datos quedan asociados a la cuenta del Usuario y protegidos por reglas de seguridad que hacen que cada Usuario solo pueda acceder a sus propios datos. Ningún otro usuario de la App puede acceder a la información de otro.</p>
@@ -162,7 +212,7 @@
     <h3>4.2. Datos en el dispositivo</h3>
     <p>Las fotografías, imágenes, logos y firmas se almacenan únicamente en el dispositivo del Usuario y no se transmiten a nuestros servidores ni a la nube.</p>
 
-    <h3>5. Respaldo, pérdida de datos y responsabilidad del Usuario sobre las imágenes</h3>
+    <h3 id="priv-5">5. Respaldo, pérdida de datos y responsabilidad del Usuario sobre las imágenes</h3>
     <p>Dado que las fotografías e imágenes (incluidas fotos de auditorías, logos de clientes, logo de empresa, foto de perfil y firma) se guardan únicamente en el dispositivo y <strong>NO</strong> se respaldan en la nube, el Usuario debe tener en cuenta lo siguiente:</p>
     <ul>
       <li>Si el Usuario desinstala la App, borra sus datos, pierde, cambia o formatea su dispositivo, dichas imágenes pueden perderse de forma permanente, incluso si sus datos de texto se conservan en la nube.</li>
@@ -171,7 +221,7 @@
     </ul>
     <p>El Desarrollador no será responsable por la pérdida de imágenes ni de ningún otro dato que no se encuentre respaldado en la nube, conforme se detalla en los Términos y Condiciones.</p>
 
-    <h3>6. Permisos que utiliza la App</h3>
+    <h3 id="priv-6">6. Permisos que utiliza la App</h3>
     <p>La App solicita los siguientes permisos, cada uno con una finalidad específica:</p>
     <ul>
       <li><strong>Cámara:</strong> para tomar fotografías durante las auditorías.</li>
@@ -182,14 +232,14 @@
     </ul>
     <p>La App no solicita permisos de ubicación, contactos, teléfono ni micrófono.</p>
 
-    <h3>7. Compartir información con terceros</h3>
+    <h3 id="priv-7">7. Compartir información con terceros</h3>
     <p>No compartimos su información con terceros, salvo:</p>
     <ul>
       <li><strong>Google Firebase / Google:</strong> como proveedor de la infraestructura de almacenamiento e inicio de sesión, descrito en la sección 4.</li>
       <li><strong>Cuando la ley lo exija:</strong> si una autoridad competente lo requiere en el marco de un proceso legal válido.</li>
     </ul>
 
-    <h3>8. Sus derechos sobre sus datos</h3>
+    <h3 id="priv-8">8. Sus derechos sobre sus datos</h3>
     <p>El Usuario puede:</p>
     <ul>
       <li>Acceder a sus datos desde la propia App.</li>
@@ -199,35 +249,32 @@
     </ul>
     <p>De acuerdo con la normativa aplicable en materia de protección de datos personales (incluida, en Argentina, la Ley N.º 25.326), el Usuario y los titulares de datos personales pueden ejercer sus derechos de acceso, rectificación, actualización y supresión de sus datos.</p>
 
-    <h3>9. Datos de menores</h3>
+    <h3 id="priv-9">9. Datos de menores</h3>
     <p>La App está dirigida a profesionales y no está destinada a menores de edad. No recopilamos de forma consciente datos de menores.</p>
 
-    <h3>10. Cambios en esta Política</h3>
+    <h3 id="priv-10">10. Cambios en esta Política</h3>
     <p>Podemos actualizar esta Política de Privacidad ocasionalmente. Cuando lo hagamos, actualizaremos la fecha de "Última actualización" al inicio del documento. Se recomienda al Usuario revisar esta política periódicamente.</p>
 
-    <h3>11. Contacto</h3>
+    <h3 id="priv-11">11. Contacto</h3>
     <p>Para cualquier consulta, solicitud o reclamo relacionado con esta Política de Privacidad o con el tratamiento de sus datos, puede contactarnos en:</p>
     <p>Miguel Ernesto Camarero<br>Correo electrónico: <a href="mailto:auditapp.app@gmail.com">auditapp.app@gmail.com</a></p>
   </section>
 
-  <section id="terminos">
-    <h2>Términos y Condiciones de Uso — AuditApp</h2>
-    <p class="meta">Última actualización: 6 de septiembre de 2026</p>
+  <h2 class="parte-titulo" id="parte2">Parte 2 — Términos y Condiciones de Uso</h2>
 
+  <section>
     <p>Estos Términos y Condiciones (en adelante, los "Términos") regulan el uso de la aplicación AuditApp (en adelante, "la App"), desarrollada y publicada por Miguel Ernesto Camarero (en adelante, "el Desarrollador").</p>
-
     <p>Al descargar, instalar o utilizar la App, usted (en adelante, "el Usuario") declara haber leído, comprendido y aceptado estos Términos en su totalidad. Si no está de acuerdo con ellos, no utilice la App.</p>
-
     <p><strong>Contacto:</strong> <a href="mailto:auditapp.app@gmail.com">auditapp.app@gmail.com</a></p>
 
-    <h3>1. Objeto y naturaleza de la App</h3>
+    <h3 id="tyc-1">1. Objeto y naturaleza de la App</h3>
     <p>AuditApp es una herramienta de apoyo para la gestión y documentación de auditorías, orientada a técnicos en Higiene y Seguridad en el Trabajo y a auditores en general. La App permite organizar clientes, registrar auditorías, documentar hallazgos y generar informes en PDF.</p>
     <p>La App es únicamente una herramienta informática. No brinda asesoramiento profesional, técnico, legal ni de seguridad e higiene. El criterio profesional, las conclusiones, los hallazgos, las calificaciones y las recomendaciones de cada auditoría son de exclusiva autoría y responsabilidad del Usuario que la realiza. El Desarrollador no interviene, valida ni se responsabiliza por el contenido profesional de las auditorías ni por las decisiones que el Usuario o terceros tomen a partir de ellas.</p>
 
-    <h3>2. Registro y cuenta</h3>
+    <h3 id="tyc-2">2. Registro y cuenta</h3>
     <p>Para utilizar la App, el Usuario debe iniciar sesión con una cuenta de Google. El Usuario es responsable de mantener la confidencialidad y seguridad de su cuenta, así como de toda actividad que se realice a través de ella.</p>
 
-    <h3>3. Uso correcto de la App</h3>
+    <h3 id="tyc-3">3. Uso correcto de la App</h3>
     <p>El Usuario se compromete a utilizar la App de manera lícita y de acuerdo con estos Términos. En particular, el Usuario se obliga a:</p>
     <ul>
       <li>No utilizar la App para fines ilícitos o no autorizados.</li>
@@ -236,7 +283,7 @@
       <li>No intentar vulnerar la seguridad de la App ni de la infraestructura que la soporta.</li>
     </ul>
 
-    <h3>4. Datos de terceros: responsabilidad del Usuario</h3>
+    <h3 id="tyc-4">4. Datos de terceros: responsabilidad del Usuario</h3>
     <p>La App permite al Usuario cargar información sobre las empresas que audita y sobre personas de contacto en dichas empresas (por ejemplo: nombre de la empresa, CUIT, dirección, datos de contacto, responsables de acciones correctivas, fotografías del establecimiento, entre otros).</p>
     <p>El Usuario reconoce y acepta que:</p>
     <ul>
@@ -247,7 +294,7 @@
     </ul>
     <p>El Desarrollador actúa exclusivamente como proveedor de la herramienta y de la infraestructura de almacenamiento, y no decide ni controla qué datos de terceros carga el Usuario.</p>
 
-    <h3>5. Almacenamiento de datos, respaldo y pérdida de información</h3>
+    <h3 id="tyc-5">5. Almacenamiento de datos, respaldo y pérdida de información</h3>
 
     <h3>5.1. Datos sincronizados en la nube</h3>
     <p>Los datos de texto (perfil, clientes, auditorías, recordatorios) se almacenan y respaldan en la nube a través de Google Firebase, asociados a la cuenta del Usuario.</p>
@@ -265,11 +312,11 @@
     <h3>5.3. Deslinde por pérdida de datos</h3>
     <p>El Desarrollador no será responsable, bajo ninguna circunstancia, por la pérdida, corrupción o indisponibilidad de imágenes, archivos o cualquier otro dato que no se encuentre respaldado en la nube. El Usuario asume plenamente ese riesgo y la responsabilidad de sus propios respaldos.</p>
 
-    <h3>6. Disponibilidad del servicio</h3>
+    <h3 id="tyc-6">6. Disponibilidad del servicio</h3>
     <p>El Desarrollador procurará que la App funcione correctamente, pero no garantiza que la App esté disponible de forma ininterrumpida, libre de errores o de fallos. La App puede depender de servicios de terceros (como Google Firebase) y de la conexión a internet del Usuario, cuyo funcionamiento escapa al control del Desarrollador.</p>
     <p>El Desarrollador podrá modificar, suspender o discontinuar la App, total o parcialmente, en cualquier momento, procurando dar aviso razonable cuando sea posible.</p>
 
-    <h3>7. Limitación de responsabilidad</h3>
+    <h3 id="tyc-7">7. Limitación de responsabilidad</h3>
     <p>En la máxima medida permitida por la ley aplicable, el Desarrollador no será responsable por:</p>
     <ul>
       <li>Daños directos, indirectos, incidentales, especiales o consecuentes derivados del uso o de la imposibilidad de uso de la App.</li>
@@ -280,19 +327,19 @@
     </ul>
     <p>La App se proporciona "tal cual" y "según disponibilidad", sin garantías de ningún tipo, expresas o implícitas.</p>
 
-    <h3>8. Propiedad intelectual</h3>
+    <h3 id="tyc-8">8. Propiedad intelectual</h3>
     <p>La App, su diseño, su código y sus elementos gráficos son propiedad del Desarrollador y están protegidos por la normativa de propiedad intelectual aplicable. Los datos, textos, imágenes e informes que el Usuario carga o genera son de su propiedad o de los terceros correspondientes; el Desarrollador no reclama derechos sobre dicho contenido.</p>
 
-    <h3>9. Costo y planes</h3>
+    <h3 id="tyc-9">9. Costo y planes</h3>
     <p>La App se ofrece actualmente sin costo. El Desarrollador se reserva el derecho de modificar las condiciones económicas de la App en el futuro, dando aviso previo al Usuario.</p>
 
-    <h3>10. Modificaciones de los Términos</h3>
+    <h3 id="tyc-10">10. Modificaciones de los Términos</h3>
     <p>El Desarrollador podrá modificar estos Términos ocasionalmente. La versión vigente será la publicada con su fecha de "Última actualización". El uso continuado de la App luego de una modificación implica la aceptación de los Términos actualizados.</p>
 
-    <h3>11. Ley aplicable</h3>
+    <h3 id="tyc-11">11. Ley aplicable</h3>
     <p>Estos Términos se rigen por las leyes de la República Argentina, sin perjuicio de las normas de protección al consumidor y de protección de datos que resulten aplicables en el país de residencia del Usuario.</p>
 
-    <h3>12. Contacto</h3>
+    <h3 id="tyc-12">12. Contacto</h3>
     <p>Para cualquier consulta relacionada con estos Términos, puede contactarnos en:</p>
     <p>Miguel Ernesto Camarero<br>Correo electrónico: <a href="mailto:auditapp.app@gmail.com">auditapp.app@gmail.com</a></p>
   </section>
