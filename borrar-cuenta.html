@@ -109,7 +109,18 @@
   </section>
 
   <section>
-    <h2>2. Qué datos se eliminan</h2>
+    <h2>2. Eliminación parcial de datos (sin borrar toda la cuenta)</h2>
+    <p>No hace falta eliminar la cuenta completa para borrar datos puntuales. Directamente desde AuditApp, sin necesidad de contactar al soporte, el usuario puede eliminar de forma individual, en cualquier momento:</p>
+    <ul>
+      <li><strong>Un cliente:</strong> desde la ficha del cliente, opción "Eliminar cliente".</li>
+      <li><strong>Una auditoría:</strong> desde el detalle de la auditoría, opción "Eliminar auditoría".</li>
+      <li><strong>Un recordatorio/notificación:</strong> desde la lista de recordatorios del cliente, opción "Eliminar".</li>
+    </ul>
+    <p>Estas eliminaciones son inmediatas y permanentes en nuestra base de datos en la nube (Google Firebase / Cloud Firestore), sin período de retención adicional.</p>
+  </section>
+
+  <section>
+    <h2>3. Qué datos se eliminan al borrar la cuenta completa</h2>
     <p>Al eliminar la cuenta (por cualquiera de las dos vías) se borra de forma permanente e irreversible, de nuestra base de datos en la nube (Google Firebase / Cloud Firestore), todo lo siguiente:</p>
     <ul>
       <li>El perfil profesional del usuario (nombre, título, matrícula, empresa, y las rutas locales a foto/logo/firma guardadas en su ficha).</li>
@@ -122,12 +133,12 @@
   </section>
 
   <section>
-    <h2>3. Qué datos no se ven afectados (porque nunca estuvieron en nuestros servidores)</h2>
+    <h2>4. Qué datos no se ven afectados (porque nunca estuvieron en nuestros servidores)</h2>
     <p>Las fotografías de auditorías, la foto de perfil, el logo y la firma <strong>no se almacenan en la nube</strong>: viven únicamente en el almacenamiento interno del dispositivo del usuario (y, si estaba habilitado, en la carpeta "AuditApp" de la galería del teléfono). Eliminar la cuenta no borra estos archivos del dispositivo, ya que nunca se transmitieron a nuestros servidores. Para eliminarlos, el usuario debe desinstalar la app o borrarlos manualmente desde el almacenamiento o la galería de su propio teléfono.</p>
   </section>
 
   <section>
-    <h2>4. Plazos de retención</h2>
+    <h2>5. Plazos de retención</h2>
     <ul>
       <li><strong>Eliminación desde la app:</strong> inmediata, sin período de retención adicional.</li>
       <li><strong>Eliminación solicitada por correo:</strong> se procesa dentro de un plazo máximo de 30 días desde la recepción de la solicitud.</li>
@@ -136,7 +147,7 @@
   </section>
 
   <section>
-    <h2>5. Contacto</h2>
+    <h2>6. Contacto</h2>
     <p>Ante cualquier duda sobre este proceso, escribir a: <a href="mailto:auditapp.app@gmail.com">auditapp.app@gmail.com</a></p>
   </section>
 </main>
