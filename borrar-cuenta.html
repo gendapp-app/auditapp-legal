@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AuditApp — Eliminación de cuenta y datos</title>
+<style>
+  :root {
+    color-scheme: light;
+    --azul: #1B3A5C;
+    --texto: #0D1B2A;
+    --texto-sec: #5A6A7A;
+    --fondo: #F4F6F8;
+    --borde: #E1E6EB;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  header {
+    background: var(--azul);
+    color: #fff;
+    padding: 28px 20px;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0 0 8px;
+    font-size: 1.4rem;
+  }
+  header p {
+    margin: 2px 0;
+    opacity: 0.85;
+    font-size: 0.9rem;
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 24px 20px 64px;
+  }
+  .intro {
+    background: #fff;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+  }
+  section {
+    background: #fff;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    padding: 8px 24px 24px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    color: var(--azul);
+    font-size: 1.15rem;
+  }
+  h3 {
+    color: var(--azul);
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+  }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  strong.important {
+    color: #C62828;
+  }
+  a { color: var(--azul); }
+  .volver {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+  }
+  footer {
+    text-align: center;
+    color: var(--texto-sec);
+    font-size: 0.85rem;
+    padding: 24px 20px 40px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>AuditApp — Eliminación de cuenta y datos</h1>
+  <p>Última actualización: 12 de septiembre de 2026</p>
+  <p>Responsable: Miguel Ernesto Camarero · Contacto: <a href="mailto:auditapp.app@gmail.com" style="color:#fff;">auditapp.app@gmail.com</a></p>
+</header>
+
+<main>
+  <a class="volver" href="./index.html">&larr; Volver a Política de Privacidad y Términos y Condiciones</a>
+
+  <div class="intro">
+    <p style="margin:0;">Esta página explica cómo cualquier usuario de <strong>AuditApp</strong> (aplicación de Android publicada por Miguel Ernesto Camarero, paquete <code>com.miguel.auditapp</code>) puede solicitar la eliminación de su cuenta y de los datos asociados, ya sea desde la propia app o sin necesidad de tenerla instalada.</p>
+  </div>
+
+  <section>
+    <h2>1. Cómo solicitar la eliminación</h2>
+
+    <h3>Opción A — Desde la app (inmediata)</h3>
+    <p>Dentro de AuditApp, ir a <strong>Configuración → Cuenta → Zona de riesgo → "Eliminar cuenta y todos mis datos"</strong> y confirmar la acción. La eliminación se ejecuta al instante, sin demoras.</p>
+
+    <h3>Opción B — Sin acceso a la app</h3>
+    <p>Si el usuario ya no tiene la app instalada o no puede iniciar sesión, puede solicitar la eliminación enviando un correo a <a href="mailto:auditapp.app@gmail.com?subject=Eliminar%20mi%20cuenta%20de%20AuditApp">auditapp.app@gmail.com</a> con el asunto "Eliminar mi cuenta de AuditApp", indicando la dirección de correo de la cuenta de Google que usaba para iniciar sesión en AuditApp. La solicitud se procesará en un plazo máximo de 30 días.</p>
+  </section>
+
+  <section>
+    <h2>2. Qué datos se eliminan</h2>
+    <p>Al eliminar la cuenta (por cualquiera de las dos vías) se borra de forma permanente e irreversible, de nuestra base de datos en la nube (Google Firebase / Cloud Firestore), todo lo siguiente:</p>
+    <ul>
+      <li>El perfil profesional del usuario (nombre, título, matrícula, empresa, y las rutas locales a foto/logo/firma guardadas en su ficha).</li>
+      <li>Todos los clientes cargados por el usuario.</li>
+      <li>Todas las auditorías y su contenido: secciones, ítems, estados, observaciones, plan de acción correctiva, conclusiones y recomendaciones.</li>
+      <li>Las plantillas propias creadas por el usuario.</li>
+      <li>Los recordatorios y notificaciones asociados a sus clientes.</li>
+      <li>La cuenta de autenticación en sí (Firebase Authentication). Tras la eliminación, el usuario no puede volver a acceder a los datos anteriores; si inicia sesión nuevamente con la misma cuenta de Google, AuditApp le crea un perfil completamente nuevo y vacío.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>3. Qué datos no se ven afectados (porque nunca estuvieron en nuestros servidores)</h2>
+    <p>Las fotografías de auditorías, la foto de perfil, el logo y la firma <strong>no se almacenan en la nube</strong>: viven únicamente en el almacenamiento interno del dispositivo del usuario (y, si estaba habilitado, en la carpeta "AuditApp" de la galería del teléfono). Eliminar la cuenta no borra estos archivos del dispositivo, ya que nunca se transmitieron a nuestros servidores. Para eliminarlos, el usuario debe desinstalar la app o borrarlos manualmente desde el almacenamiento o la galería de su propio teléfono.</p>
+  </section>
+
+  <section>
+    <h2>4. Plazos de retención</h2>
+    <ul>
+      <li><strong>Eliminación desde la app:</strong> inmediata, sin período de retención adicional.</li>
+      <li><strong>Eliminación solicitada por correo:</strong> se procesa dentro de un plazo máximo de 30 días desde la recepción de la solicitud.</li>
+    </ul>
+    <p>No conservamos copias de respaldo adicionales de los datos eliminados más allá de lo que Google Cloud / Firebase pueda retener transitoriamente por razones operativas propias de su infraestructura.</p>
+  </section>
+
+  <section>
+    <h2>5. Contacto</h2>
+    <p>Ante cualquier duda sobre este proceso, escribir a: <a href="mailto:auditapp.app@gmail.com">auditapp.app@gmail.com</a></p>
+  </section>
+</main>
+
+<footer>
+  AuditApp — Miguel Ernesto Camarero
+</footer>
+
+</body>
+</html>
