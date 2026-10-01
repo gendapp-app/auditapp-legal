@@ -117,7 +117,7 @@
 
 <header>
   <h1>AuditApp — Política de Privacidad y Términos y Condiciones</h1>
-  <p>Última actualización: 25 de septiembre de 2026</p>
+  <p>Última actualización: 1 de octubre de 2026</p>
   <p>Responsable: Miguel Ernesto Camarero · Contacto: <a href="mailto:auditapp.app@gmail.com" style="color:#fff;">auditapp.app@gmail.com</a></p>
 </header>
 
@@ -195,17 +195,23 @@
     <p>Única excepción: si el Usuario decide utilizar la función de inteligencia artificial sobre un ítem de auditoría, la App envía temporalmente hasta dos fotografías de ese ítem para generar el texto, sin que se almacenen ni respalden en la nube (ver sección 2.6).</p>
 
     <h3>2.6. Uso de la función de inteligencia artificial (opcional)</h3>
-    <p>La App ofrece botones "Generar con IA" que ayudan a redactar textos de los informes. La función se activa <strong>únicamente cuando el Usuario toca uno de esos botones</strong>; la App nunca envía información para IA de forma automática. Al usarla, la App envía a nuestro servidor, para su procesamiento:</p>
+    <p>La App ofrece botones "Generar con IA" que ayudan a redactar textos de los informes. La función se activa <strong>únicamente cuando el Usuario toca uno de esos botones</strong>; la App nunca envía información para IA de forma automática. Al usarla, la App envía a nuestro servidor, que a su vez los envía a <strong>Google Gemini</strong> (el servicio de inteligencia artificial de Google) para generar el texto:</p>
     <ul>
       <li>El texto que el Usuario ya haya escrito en el campo que desea redactar o mejorar (borrador), si lo hay.</li>
-      <li>Datos de contexto. En la observación y la acción correctiva de un ítem: la descripción del ítem, el título de su sección, el tipo de auditoría y el resultado del ítem. En la introducción, las conclusiones y las recomendaciones de una auditoría: además, el nombre del cliente, el lugar y un resumen del informe (cantidad de ítems por estado y las observaciones y acciones correctivas cargadas). En capacitaciones: título, área, cliente, cantidad de participantes, duración y temas.</li>
+      <li>Datos de contexto. En la observación y la acción correctiva de un ítem: la descripción del ítem, el título de su sección, el sector donde se registró el hallazgo, el tipo de auditoría, el resultado del ítem, lo ya escrito en la observación o la acción correctiva de ese ítem, y el rubro y la cantidad aproximada de trabajadores de la empresa auditada (sin su nombre ni su ubicación). En la introducción, las conclusiones y las recomendaciones de una auditoría: además, el nombre del cliente, el lugar, el rubro, la cantidad de trabajadores y la localidad de la empresa, y un resumen del informe (cantidad de ítems por estado y las observaciones y acciones correctivas cargadas). En capacitaciones: título, área, cliente, cantidad de participantes, duración, temas, y el rubro y la cantidad de trabajadores de la empresa. En la descripción de una planilla: su nombre y los ítems de una de sus secciones. En las descripciones del perfil: únicamente las palabras clave que el Usuario escribió en ese campo.</li>
       <li>Hasta dos fotografías del ítem (reducidas de tamaño), únicamente al redactar la observación o la acción correctiva de un ítem.</li>
     </ul>
+    <p>En resumen: <strong>al usar la IA sobre un ítem, el texto y las fotos de ese ítem se envían a Google Gemini</strong> para generar el texto. Nunca se envían el teléfono ni el correo electrónico de las personas de contacto, ni la firma, el logo o la foto de perfil.</p>
     <p>Estos datos se utilizan solo para generar el texto solicitado. El Desarrollador no los guarda en su base de datos ni en almacenamiento en la nube. El texto generado, una vez aceptado por el Usuario, pasa a formar parte del contenido de su auditoría y se almacena como cualquier otro texto del informe (sección 4.1).</p>
     <p>Se recomienda evitar fotografiar rostros u otros datos personales de terceros cuando se utilice esta función.</p>
 
     <h3>2.7. Datos técnicos para controlar el uso de la IA</h3>
-    <p>Para limitar la cantidad de Créditos IA gratuitos de prueba y evitar abusos, nuestro servidor registra el identificador interno de la cuenta, un identificador anonimizado del dispositivo (resultado de aplicar una función de hash irreversible al identificador Android del equipo; no se guarda el identificador original), la cantidad de usos de IA realizados y la fecha de la última actualización. Estos registros <strong>se conservan aunque el Usuario elimine su cuenta</strong>, con el único fin de impedir que la prueba gratuita se repita creando nuevas cuentas en el mismo dispositivo, y no se utilizan para ningún otro propósito.</p>
+    <p>Para limitar la cantidad de Créditos IA gratuitos de prueba y evitar abusos, nuestro servidor registra el identificador interno de la cuenta, un identificador anonimizado del dispositivo (resultado de aplicar una función de hash irreversible al identificador Android del equipo; no se guarda el identificador original), la cantidad de usos de IA realizados (en total, por mes y por día, para aplicar límites de seguridad contra usos abusivos o errores) y la fecha de la última actualización. Estos registros <strong>se conservan aunque el Usuario elimine su cuenta</strong>, con el único fin de impedir que la prueba gratuita se repita creando nuevas cuentas en el mismo dispositivo, y no se utilizan para ningún otro propósito.</p>
+    <p>Además, para proteger el servicio contra usos no autorizados, la App utiliza <strong>Firebase App Check con Google Play Integrity</strong>: al comunicarse con nuestro servidor, la App adjunta un comprobante emitido por Google que indica si el pedido proviene de la versión original de la App instalada desde Google Play en un dispositivo genuino. Ese comprobante no contiene el contenido de las auditorías del Usuario, y nuestro servidor solo registra si fue válido o no.</p>
+
+    <h3>2.8. Compras, planes y Créditos IA</h3>
+    <p>Las suscripciones (planes) y los paquetes de Créditos IA se compran y se pagan <strong>a través de Google Play</strong>. El cobro, los medios de pago, la facturación, las renovaciones, las cancelaciones y los reembolsos los gestiona Google con la cuenta de Google Play del Usuario. <strong>La App y el Desarrollador nunca reciben ni almacenan datos de tarjetas ni de otros medios de pago.</strong></p>
+    <p>Para asignar lo comprado a la cuenta correcta, nuestro servidor verifica cada compra directamente con Google Play y guarda únicamente: el producto comprado, los identificadores de la compra y del pedido que informa Google, su estado (activa, cancelada, pendiente o reembolsada), las fechas del período pagado, el identificador interno de la cuenta y el identificador anonimizado del dispositivo descrito en la sección 2.7, además del plan vigente y el saldo de Créditos IA de la cuenta. Estos registros se conservan aunque el Usuario elimine su cuenta, para poder respetar una compra vigente si vuelve a ingresar y para atender reclamos o reembolsos.</p>
 
     <h3 id="priv-3">3. Cómo utilizamos la información</h3>
     <p>Utilizamos la información recopilada para:</p>
@@ -214,6 +220,8 @@
       <li>Almacenar y sincronizar los datos de las auditorías, clientes y perfil del Usuario para que estén disponibles y respaldados.</li>
       <li>Generar los informes en PDF que produce la App.</li>
       <li>Redactar, cuando el Usuario lo solicita, textos de los informes mediante inteligencia artificial, y controlar el uso de los Créditos IA.</li>
+      <li>Verificar las compras realizadas en Google Play y asignar a la cuenta el plan o los Créditos IA comprados.</li>
+      <li>Proteger el servicio contra usos no autorizados (App Check y límites de uso).</li>
       <li>Enviar notificaciones locales al Usuario sobre auditorías próximas a vencer o acciones correctivas atrasadas.</li>
       <li>Mantener y mejorar el funcionamiento de la App.</li>
     </ul>
@@ -232,6 +240,9 @@
     <p>Los pedidos de la función de IA pasan por un servidor propio alojado en Google Firebase (Cloud Functions), que los reenvía a la API de Gemini de Google para generar el texto. Ambos servicios son provistos por Google y el procesamiento puede realizarse en servidores ubicados fuera del país de residencia del Usuario (por ejemplo, en Estados Unidos).</p>
     <p>Según las condiciones de la API de Gemini en su modalidad paga, que es la que utiliza AuditApp, Google no usa los textos ni las imágenes enviados para mejorar sus productos ni para entrenar sus modelos, aunque puede registrarlos temporalmente para prevenir abusos, garantizar la seguridad del servicio y cumplir obligaciones legales. Puede consultarlas en: <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">ai.google.dev/gemini-api/terms</a></p>
 
+    <h3>4.4. Pagos (Google Play)</h3>
+    <p>Los pagos de planes y paquetes de Créditos IA se procesan exclusivamente mediante el sistema de facturación de Google Play, conforme a las condiciones y la política de privacidad de Google. Puede consultarlas en: <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener">play.google.com/about/play-terms</a> y <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
+
     <h3 id="priv-5">5. Respaldo, pérdida de datos y responsabilidad del Usuario sobre las imágenes</h3>
     <p>Dado que las fotografías e imágenes (incluidas fotos de auditorías, logos de clientes, logo de empresa, foto de perfil y firma) se guardan únicamente en el dispositivo y <strong>NO</strong> se respaldan en la nube, el Usuario debe tener en cuenta lo siguiente:</p>
     <ul>
@@ -248,15 +259,17 @@
       <li><strong>Acceso a imágenes/galería:</strong> para seleccionar fotografías de la galería (ítems de auditoría, foto de perfil, logo, imagen de portada) y para guardar las fotos tomadas en la carpeta "AuditApp".</li>
       <li><strong>Notificaciones:</strong> para avisar sobre auditorías próximas a vencer y acciones correctivas atrasadas.</li>
       <li><strong>Reinicio del dispositivo:</strong> para volver a programar dichos avisos luego de reiniciar el teléfono.</li>
-      <li><strong>Internet y estado de la red:</strong> para el inicio de sesión, la sincronización de datos con Firebase y la función de inteligencia artificial.</li>
+      <li><strong>Internet y estado de la red:</strong> para el inicio de sesión, la sincronización de datos con Firebase, la función de inteligencia artificial y las compras.</li>
+      <li><strong>Facturación de Google Play:</strong> para comprar planes y paquetes de Créditos IA.</li>
     </ul>
     <p>La App no solicita permisos de ubicación, contactos, teléfono ni micrófono.</p>
 
     <h3 id="priv-7">7. Compartir información con terceros</h3>
     <p>No compartimos su información con terceros, salvo:</p>
     <ul>
-      <li><strong>Google Firebase / Google:</strong> como proveedor de la infraestructura de almacenamiento e inicio de sesión, descrito en la sección 4.</li>
+      <li><strong>Google Firebase / Google:</strong> como proveedor de la infraestructura de almacenamiento, inicio de sesión y verificación de integridad (App Check y Play Integrity), descrito en las secciones 2.7 y 4.</li>
       <li><strong>Google (API de Gemini):</strong> únicamente cuando el Usuario utiliza la función de inteligencia artificial, recibe los textos, datos de contexto y fotografías descritos en la sección 2.6 para generar el texto solicitado, en las condiciones de la sección 4.3.</li>
+      <li><strong>Google Play:</strong> procesa los pagos de planes y paquetes de Créditos IA y le informa a nuestro servidor el estado de cada compra (sección 2.8).</li>
       <li><strong>Cuando la ley lo exija:</strong> si una autoridad competente lo requiere en el marco de un proceso legal válido.</li>
     </ul>
 
@@ -358,12 +371,14 @@
     <ul>
       <li><strong>Es una ayuda, no un reemplazo del criterio profesional.</strong> Los textos generados son sugerencias que pueden contener errores, imprecisiones u omisiones y que pueden no ajustarse a la normativa aplicable ni a la situación real relevada. El Usuario debe revisarlos y editarlos antes de incorporarlos a un informe, y es el único responsable de su contenido final (ver también la sección 1).</li>
       <li><strong>Envío de datos a Google.</strong> Al tocar un botón "Generar con IA", los textos, datos de contexto y, en su caso, fotografías descritos en la Política de Privacidad (secciones 2.6 y 4.3) se envían a Google para su procesamiento. El Usuario es responsable de contar con el derecho y la autorización necesarios para enviar esa información, incluida la relativa a la empresa auditada y a terceros, y debe evitar fotografiar personas cuando utilice esta función.</li>
-      <li><strong>Créditos IA.</strong> La función funciona con "Créditos IA". El Usuario dispone de una cantidad limitada de Créditos IA gratuitos de prueba, asociados a su cuenta y a su dispositivo. Al agotarse, la función queda bloqueada hasta que existan planes o paquetes para ampliarla. El Desarrollador puede modificar la cantidad de Créditos IA gratuitos y las condiciones de la función.</li>
+      <li><strong>Créditos IA.</strong> La función funciona con "Créditos IA". El Usuario dispone de una cantidad limitada de Créditos IA gratuitos de prueba, asociados a su cuenta y a su dispositivo. Para seguir usándola, el Usuario puede contratar un plan (con una cantidad de Créditos IA por mes que no se acumula de un mes al otro) o comprar paquetes de Créditos IA (que no vencen). Por seguridad existe además un límite máximo de usos por día, muy superior al uso habitual; si se alcanza, la función se habilita de nuevo al día siguiente y no se descuentan créditos. El Desarrollador puede modificar la cantidad de Créditos IA gratuitos, los límites de seguridad y las condiciones de la función.</li>
       <li><strong>Disponibilidad.</strong> La función depende de servicios de terceros y puede no estar disponible de forma ininterrumpida. El resto de la App puede utilizarse sin ella.</li>
     </ul>
 
     <h3 id="tyc-10">10. Costo y planes</h3>
-    <p>La App se ofrece actualmente sin costo. La función de inteligencia artificial incluye una cantidad limitada de Créditos IA gratuitos de prueba; el Desarrollador prevé ofrecer en el futuro planes pagos (suscripción y/o paquetes de créditos) para ampliar su uso, cuyas condiciones y precios se informarán antes de su contratación. El Desarrollador se reserva el derecho de modificar las condiciones económicas de la App en el futuro, dando aviso previo al Usuario.</p>
+    <p>El uso de la App es gratuito, salvo la función de inteligencia artificial más allá de los Créditos IA gratuitos de prueba. Para ampliarla, la App ofrece planes pagos por suscripción (mensual o anual) y paquetes de Créditos IA de compra única. Los precios se muestran en la App, en la moneda que informa Google Play, antes de confirmar cada compra.</p>
+    <p>Todas las compras se realizan a través de Google Play y se rigen por sus condiciones. Las suscripciones se renuevan automáticamente hasta que el Usuario las cancele desde Google Play; al cancelar, el plan sigue vigente hasta el final del período ya pagado. Los reembolsos se gestionan conforme a las políticas de Google Play. Los Créditos IA no tienen valor monetario, no se transfieren a otras cuentas y no se canjean por dinero.</p>
+    <p>El Desarrollador se reserva el derecho de modificar los precios, los planes y las condiciones económicas de la App, dando aviso previo al Usuario; los cambios no afectan a un período ya pagado.</p>
 
     <h3 id="tyc-11">11. Modificaciones de los Términos</h3>
     <p>El Desarrollador podrá modificar estos Términos ocasionalmente. La versión vigente será la publicada con su fecha de "Última actualización". El uso continuado de la App luego de una modificación implica la aceptación de los Términos actualizados.</p>
