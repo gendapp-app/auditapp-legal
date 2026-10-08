@@ -109,7 +109,7 @@
 
 <header>
   <h1>AuditApp — Eliminación de cuenta y datos</h1>
-  <p>Última actualización: 12 de septiembre de 2026</p>
+  <p>Última actualización: 8 de octubre de 2026</p>
   <p>Responsable: Miguel Ernesto Camarero · Contacto: <a href="mailto:auditapp.app@gmail.com" style="color:#fff;">auditapp.app@gmail.com</a></p>
 </header>
 
@@ -124,7 +124,7 @@
     <h2>1. Cómo solicitar la eliminación</h2>
 
     <h3>Opción A — Desde la app (inmediata)</h3>
-    <p>Dentro de AuditApp, ir a <strong>Configuración → Cuenta → Zona de riesgo → "Eliminar cuenta y todos mis datos"</strong> y confirmar la acción. La eliminación se ejecuta al instante, sin demoras.</p>
+    <p>Dentro de AuditApp, ir a <strong>Configuración → Zona de riesgo → "Eliminar cuenta y todos mis datos"</strong> y confirmar la acción. Esta opción requiere conexión a internet. La eliminación se ejecuta al instante, sin demoras.</p>
 
     <h3>Opción B — Sin acceso a la app</h3>
     <p>Si el usuario ya no tiene la app instalada o no puede iniciar sesión, puede solicitar la eliminación enviando un correo a <a href="mailto:auditapp.app@gmail.com?subject=Eliminar%20mi%20cuenta%20de%20AuditApp">auditapp.app@gmail.com</a> con el asunto "Eliminar mi cuenta de AuditApp", indicando la dirección de correo de la cuenta de Google que usaba para iniciar sesión en AuditApp. La solicitud se procesará en un plazo máximo de 30 días.</p>
@@ -134,10 +134,12 @@
     <h2>2. Eliminación parcial de datos (sin borrar toda la cuenta)</h2>
     <p>No hace falta eliminar la cuenta completa para borrar datos puntuales. Directamente desde AuditApp, sin necesidad de contactar al soporte, el usuario puede eliminar de forma individual, en cualquier momento:</p>
     <ul>
-      <li><strong>Un cliente:</strong> desde la ficha del cliente, opción "Eliminar cliente".</li>
-      <li><strong>Una auditoría:</strong> desde el detalle de la auditoría, opción "Eliminar auditoría".</li>
-      <li><strong>Un recordatorio/notificación:</strong> desde la lista de recordatorios del cliente, opción "Eliminar".</li>
+      <li><strong>Un cliente:</strong> desde la ficha del cliente, opción "Eliminar cliente". Junto con el cliente se eliminan también todas sus auditorías, capacitaciones y recordatorios. Antes de confirmar, la app avisa cuántos de cada uno se van a borrar.</li>
+      <li><strong>Una auditoría:</strong> desde el detalle de la auditoría, opción "Eliminar auditoría". Si la auditoría está finalizada, primero hay que reabrirla.</li>
+      <li><strong>Una capacitación:</strong> desde el detalle de la capacitación, opción "Eliminar capacitación". Si la capacitación está finalizada, primero hay que reabrirla.</li>
+      <li><strong>Un recordatorio/notificación:</strong> desde la lista de recordatorios (campanita del Inicio o de la ficha del cliente), opción "Eliminar".</li>
     </ul>
+    <p>Al eliminar una auditoría o una capacitación se elimina también el recordatorio de "próxima auditoría/capacitación recomendada" que se haya creado a partir de ella.</p>
     <p>Estas eliminaciones son inmediatas y permanentes en nuestra base de datos en la nube (Google Firebase / Cloud Firestore), sin período de retención adicional.</p>
   </section>
 
@@ -148,6 +150,7 @@
       <li>El perfil profesional del usuario (nombre, título, matrícula, empresa, y las rutas locales a foto/logo/firma guardadas en su ficha).</li>
       <li>Todos los clientes cargados por el usuario.</li>
       <li>Todas las auditorías y su contenido: secciones, ítems, estados, observaciones, plan de acción correctiva, conclusiones y recomendaciones.</li>
+      <li>Todas las capacitaciones y su contenido: temas, participantes, duración, observaciones y recomendaciones.</li>
       <li>Las plantillas propias creadas por el usuario.</li>
       <li>Los recordatorios y notificaciones asociados a sus clientes.</li>
       <li>La cuenta de autenticación en sí (Firebase Authentication). Tras la eliminación, el usuario no puede volver a acceder a los datos anteriores; si inicia sesión nuevamente con la misma cuenta de Google, AuditApp le crea un perfil completamente nuevo y vacío.</li>
@@ -156,7 +159,7 @@
 
   <section>
     <h2>4. Qué datos no se ven afectados</h2>
-    <p>Las fotografías de auditorías, la foto de perfil, el logo y la firma <strong>no se almacenan en la nube</strong>: viven únicamente en el almacenamiento interno del dispositivo del usuario (y, si estaba habilitado, en la carpeta "AuditApp" de la galería del teléfono). Eliminar la cuenta no borra estos archivos del dispositivo, ya que nunca se guardaron en nuestros servidores (las fotografías que el usuario haya enviado a la función de inteligencia artificial se procesan de forma transitoria y no se almacenan). Para eliminarlos, el usuario debe desinstalar la app o borrarlos manualmente desde el almacenamiento o la galería de su propio teléfono.</p>
+    <p>Las fotografías de auditorías y capacitaciones, la foto de perfil, el logo y la firma <strong>no se almacenan en la nube</strong>: viven únicamente en el almacenamiento interno del dispositivo del usuario (y, si estaba habilitado, en la carpeta "AuditApp" de la galería del teléfono). Eliminar la cuenta no borra estos archivos del dispositivo, ya que nunca se guardaron en nuestros servidores (las fotografías que el usuario haya enviado a la función de inteligencia artificial se procesan de forma transitoria y no se almacenan). Para eliminarlos, el usuario debe desinstalar la app o borrarlos manualmente desde el almacenamiento o la galería de su propio teléfono.</p>
     <p><strong>Registros de uso de la función de inteligencia artificial.</strong> Para limitar la prueba gratuita de la función de IA y evitar abusos, nuestro servidor conserva, aun después de eliminar la cuenta, el identificador interno de la cuenta eliminada, un identificador anonimizado del dispositivo (hash irreversible, no el identificador original) y la cantidad de usos de IA realizados. Estos registros no contienen textos, fotografías ni datos de clientes o auditorías, y se usan únicamente para impedir que la prueba gratuita se repita creando cuentas nuevas en el mismo dispositivo. Para solicitar su eliminación, escribir a <a href="mailto:auditapp.app@gmail.com">auditapp.app@gmail.com</a>.</p>
     <p><strong>Registros de compras.</strong> Si el usuario compró un plan o un paquete de Créditos IA en Google Play, nuestro servidor conserva, aun después de eliminar la cuenta, el registro de cada compra verificada (producto, identificadores de la compra y del pedido que informa Google, estado, fechas del período pagado, identificador interno de la cuenta e identificador anonimizado del dispositivo), y el saldo de Créditos IA y plan vigente de la cuenta. Sirven para respetar una compra vigente si el usuario vuelve a ingresar y para atender reclamos o reembolsos. Nunca incluyen datos de tarjetas ni de medios de pago, que solo maneja Google Play. Eliminar la cuenta no cancela una suscripción: hay que cancelarla desde Google Play.</p>
   </section>
