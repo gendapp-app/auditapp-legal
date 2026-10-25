@@ -29,6 +29,7 @@
   <a href="#cuenta">Cuenta y datos</a>
   <a href="#sin-senal">Sin señal</a>
   <a href="#ia">Inteligencia artificial</a>
+  <a href="#recorrido">Recorrido por voz</a>
   <a href="#creditos">Créditos y planes</a>
   <a href="#auditorias">Auditorías y plantillas</a>
   <a href="#pdf">Informes PDF</a>
@@ -73,6 +74,12 @@
     <p>Los datos no, porque están en tu cuenta. Las fotos sí, porque viven solo en el teléfono. Exportá una copia antes de desinstalar.</p>
   </div>
 </details>
+<details>
+  <summary>¿La app guarda datos de cómo la uso?</summary>
+  <div class="respuesta">
+    <p>Solo cantidades y fechas: cuántos informes PDF generaste (y de qué tipo) y qué días abriste la app. Nada del contenido de los informes ni de tus clientes. Sirve para saber cuánto se usa la app y mejorarla, no se comparte con nadie y se borra si eliminás tu cuenta.</p>
+  </div>
+</details>
 </section>
 <section class="grupo-faq" id="sin-senal">
 <h2>Sin señal</h2>
@@ -86,7 +93,7 @@
 <details>
   <summary>¿Qué cosas necesitan internet?</summary>
   <div class="respuesta">
-    <p>La IA (también importar plantillas con IA), comprar o restaurar planes y créditos, iniciar sesión, cambiar de cuenta, cerrar sesión, importar una copia de seguridad y eliminar la cuenta. Si no hay conexión, la app te avisa al instante.</p>
+    <p>La IA (también importar plantillas con IA y armar la auditoría de un Recorrido por voz), comprar o restaurar planes y créditos, iniciar sesión, cambiar de cuenta, cerrar sesión, importar una copia de seguridad y eliminar la cuenta. Si no hay conexión, la app te avisa al instante.</p>
     <p>Cerrar sesión y cambiar de cuenta piden internet para que antes se suba todo lo que hiciste sin señal.</p>
   </div>
 </details>
@@ -110,6 +117,7 @@
       <li>En las capacitaciones, pasa en limpio los temas, las observaciones y las recomendaciones que escribiste.</li>
       <li>Las descripciones de tu perfil, de tu empresa y de tus plantillas.</li>
       <li>Arma una plantilla a partir de una planilla que ya tenés: fotos de una planilla en papel, un PDF, un Excel o un CSV (ver "¿Puedo importar una planilla que ya tengo?").</li>
+      <li>Arma una auditoría entera a partir de lo que vas diciendo mientras recorrés el lugar (ver <a href="#recorrido">Recorrido por voz</a>).</li>
     </ul>
     <p>Todo lo que genera queda editable.</p>
   </div>
@@ -134,6 +142,54 @@
   </div>
 </details>
 </section>
+<section class="grupo-faq" id="recorrido">
+<h2>Recorrido por voz</h2>
+<details>
+  <summary>¿Qué es el Recorrido por voz?</summary>
+  <div class="respuesta">
+    <p>Una forma de auditar caminando: vas diciendo en voz alta lo que ves en cada lugar ("Ahora estoy en el depósito. Los matafuegos están obstruidos, no conformidad mayor") y sacás fotos sin dejar de grabar. Al terminar, la IA arma la auditoría por lugares: secciones, ítems, estados y observaciones, con cada foto en su ítem.</p>
+    <p>Se arranca desde <span class="ruta">Nueva auditoría › Elegí una plantilla › Recorrido por voz</span>.</p>
+  </div>
+</details>
+<details>
+  <summary>¿Tengo que avisar que estoy grabando?</summary>
+  <div class="respuesta">
+    <p><strong>Sí.</strong> Se graba tu voz y también el sonido del lugar, que puede incluir a otras personas. Avisales a las personas presentes que estás grabando, y no grabes conversaciones privadas. La app te lo recuerda antes de la primera grabación.</p>
+  </div>
+</details>
+<details>
+  <summary>¿Qué pasa con el audio?</summary>
+  <div class="respuesta">
+    <p>Se guarda en el teléfono mientras grabás. Al terminar, se manda a Google Gemini, solo para armar la auditoría, y <strong>se borra del teléfono cuando la auditoría está lista</strong>. No queda guardado en ningún servidor. Las fotos no se mandan: quedan en el teléfono, como siempre.</p>
+    <p>Lo que arma la IA es texto y queda como una auditoría más. Una copia de ese texto (nunca del audio) se guarda hasta 7 días, para poder diagnosticar errores, y después se borra sola.</p>
+  </div>
+</details>
+<details>
+  <summary>¿Puedo decir el plazo y el responsable?</summary>
+  <div class="respuesta">
+    <p>Sí. Por ejemplo: "le doy 15 días", "hasta el 30 de diciembre", "de esto se encarga Marta" o "el responsable del depósito es José". La app completa el plazo y el responsable de esos hallazgos, igual que si los cargaras a mano. Lo que digas para todo un lugar se aplica a todos sus hallazgos.</p>
+  </div>
+</details>
+<details>
+  <summary>¿Y si no digo si es conforme o no conformidad?</summary>
+  <div class="respuesta">
+    <p>La IA sugiere el estado según lo que dijiste, y lo marca con ✨ para que lo revises. Antes de finalizar, revisá siempre la auditoría: el responsable del informe sos vos.</p>
+  </div>
+</details>
+<details>
+  <summary>¿Funciona sin señal o con la pantalla apagada?</summary>
+  <div class="respuesta">
+    <p>Grabar, sí: podés guardar el teléfono en el bolsillo con la pantalla apagada, y no hace falta señal. Para armar la auditoría sí hace falta internet: si no hay, la grabación queda guardada y se manda sola cuando vuelve la señal, aunque la app esté cerrada.</p>
+    <p>Si entra una llamada u otra app usa el micrófono, la grabación se pausa sola y el teléfono vibra. A los 60 minutos también se pausa.</p>
+  </div>
+</details>
+<details>
+  <summary>¿Cuántos créditos cuesta?</summary>
+  <div class="respuesta">
+    <p>3 Créditos IA hasta 31 minutos grabados, y 1 más cada 10 minutos (como mucho 6). Solo se descuentan si sale la auditoría. Si la IA no puede armarla, no se cobra y el audio queda en el teléfono para que reintentes o lo descartes.</p>
+  </div>
+</details>
+</section>
 <section class="grupo-faq" id="creditos">
 <h2>Créditos y planes</h2>
 <details>
@@ -141,6 +197,7 @@
   <div class="respuesta">
     <p>Cada vez que usás un botón de IA se descuenta 1 crédito. Si la IA falla y no te devuelve un texto, el crédito no se descuenta. Al empezar tenés <strong>40 créditos gratis</strong> para probarla.</p>
     <p>Importar una plantilla con IA también cuesta 1 crédito, y solo se descuenta si la plantilla sale bien.</p>
+    <p>El Recorrido por voz cuesta 3 créditos hasta 31 minutos grabados, y 1 más cada 10 minutos (como mucho 6). También se descuentan solo si la auditoría sale bien.</p>
   </div>
 </details>
 <details>

@@ -109,7 +109,7 @@
 
 <header>
   <h1>AuditApp — Eliminación de cuenta y datos</h1>
-  <p>Última actualización: 8 de octubre de 2026</p>
+  <p>Última actualización: 25 de octubre de 2026</p>
   <p>Responsable: Miguel Ernesto Camarero · Contacto: <a href="mailto:auditapp.app@gmail.com" style="color:#fff;">auditapp.app@gmail.com</a></p>
 </header>
 
@@ -153,14 +153,17 @@
       <li>Todas las capacitaciones y su contenido: temas, participantes, duración, observaciones y recomendaciones.</li>
       <li>Las plantillas propias creadas por el usuario.</li>
       <li>Los recordatorios y notificaciones asociados a sus clientes.</li>
+      <li>Las copias temporales de plantillas importadas con IA y de Recorridos por voz (el resultado armado por la IA y su copia para diagnóstico; solo texto, nunca audio). Si no se borraran antes, se borran solas a los 7 días.</li>
+      <li>Las estadísticas de uso (cantidad de informes generados y días en que se abrió la app).</li>
+      <li>Si se elimina desde la app, también se borra del teléfono un Recorrido por voz que estuviera sin terminar, con su audio.</li>
       <li>La cuenta de autenticación en sí (Firebase Authentication). Tras la eliminación, el usuario no puede volver a acceder a los datos anteriores; si inicia sesión nuevamente con la misma cuenta de Google, AuditApp le crea un perfil completamente nuevo y vacío.</li>
     </ul>
   </section>
 
   <section>
     <h2>4. Qué datos no se ven afectados</h2>
-    <p>Las fotografías de auditorías y capacitaciones, la foto de perfil, el logo y la firma <strong>no se almacenan en la nube</strong>: viven únicamente en el almacenamiento interno del dispositivo del usuario (y, si estaba habilitado, en la carpeta "AuditApp" de la galería del teléfono). Eliminar la cuenta no borra estos archivos del dispositivo, ya que nunca se guardaron en nuestros servidores (las fotografías que el usuario haya enviado a la función de inteligencia artificial se procesan de forma transitoria y no se almacenan). Para eliminarlos, el usuario debe desinstalar la app o borrarlos manualmente desde el almacenamiento o la galería de su propio teléfono.</p>
-    <p><strong>Registros de uso de la función de inteligencia artificial.</strong> Para limitar la prueba gratuita de la función de IA y evitar abusos, nuestro servidor conserva, aun después de eliminar la cuenta, el identificador interno de la cuenta eliminada, un identificador anonimizado del dispositivo (hash irreversible, no el identificador original) y la cantidad de usos de IA realizados. Estos registros no contienen textos, fotografías ni datos de clientes o auditorías, y se usan únicamente para impedir que la prueba gratuita se repita creando cuentas nuevas en el mismo dispositivo. Para solicitar su eliminación, escribir a <a href="mailto:auditapp.app@gmail.com">auditapp.app@gmail.com</a>.</p>
+    <p>Las fotografías de auditorías y capacitaciones, la foto de perfil, el logo y la firma <strong>no se almacenan en la nube</strong>: viven únicamente en el almacenamiento interno del dispositivo del usuario (y, si estaba habilitado, en la carpeta "AuditApp" de la galería del teléfono). Eliminar la cuenta no borra estos archivos del dispositivo, ya que nunca se guardaron en nuestros servidores (las fotografías que el usuario haya enviado a la función de inteligencia artificial se procesan de forma transitoria y no se almacenan). El audio del Recorrido por voz tampoco queda en nuestros servidores: se envía solo para armar la auditoría y no se guarda. Para eliminarlos, el usuario debe desinstalar la app o borrarlos manualmente desde el almacenamiento o la galería de su propio teléfono.</p>
+    <p><strong>Registros de uso de la función de inteligencia artificial.</strong> Para limitar la prueba gratuita de la función de IA y evitar abusos, nuestro servidor conserva, aun después de eliminar la cuenta, el identificador interno de la cuenta eliminada, un identificador anonimizado del dispositivo (hash irreversible, no el identificador original) y la cantidad de usos de IA realizados (y de intentos del día que no dieron un resultado válido). Estos registros no contienen textos, fotografías ni datos de clientes o auditorías, y se usan únicamente para impedir que la prueba gratuita se repita creando cuentas nuevas en el mismo dispositivo. Para solicitar su eliminación, escribir a <a href="mailto:auditapp.app@gmail.com">auditapp.app@gmail.com</a>.</p>
     <p><strong>Registros de compras.</strong> Si el usuario compró un plan o un paquete de Créditos IA en Google Play, nuestro servidor conserva, aun después de eliminar la cuenta, el registro de cada compra verificada (producto, identificadores de la compra y del pedido que informa Google, estado, fechas del período pagado, identificador interno de la cuenta e identificador anonimizado del dispositivo), y el saldo de Créditos IA y plan vigente de la cuenta. Sirven para respetar una compra vigente si el usuario vuelve a ingresar y para atender reclamos o reembolsos. Nunca incluyen datos de tarjetas ni de medios de pago, que solo maneja Google Play. Eliminar la cuenta no cancela una suscripción: hay que cancelarla desde Google Play.</p>
   </section>
 
