@@ -251,6 +251,10 @@
     <h3>2.10. Estadísticas de uso</h3>
     <p>Para saber cuánto se usa la App y mejorarla, la App guarda en la cuenta del Usuario solo cantidades y fechas: la cantidad de informes en PDF generados (en total, por tipo y por día), la fecha del último, y los días en que se abrió la App (incluida la última fecha de uso). No incluye el contenido de los informes ni datos de los clientes, no se comparte con terceros, se analiza solo en forma de totales y se borra al eliminar la cuenta.</p>
 
+    <h3>2.11. Informes de errores (Firebase Crashlytics)</h3>
+    <p>Para detectar y corregir fallas, cuando la App se cierra por un error, se traba, o encuentra un error que puede manejar sin cerrarse, envía un informe técnico a Firebase Crashlytics, un servicio de Google. El informe incluye: la descripción técnica del error (en qué parte del código ocurrió), el modelo y la marca del dispositivo, la versión de Android, la versión de la App, datos técnicos del dispositivo en ese momento (memoria y espacio libres, orientación de la pantalla, tipo de conexión a internet, si el dispositivo tiene acceso root), el momento en que se abre la App (para calcular qué porcentaje de usos termina sin fallas) y dos identificadores de instalación aleatorios generados por Firebase, que no identifican a una persona ni a un dispositivo y cambian si se reinstala la App.</p>
+    <p>Los informes no incluyen la cuenta del Usuario, su correo electrónico ni su nombre, ni datos de clientes, auditorías, capacitaciones, fotos, grabaciones o cualquier texto que el Usuario haya escrito: antes de enviarse, la App borra del mensaje del error todo lo que podría contener esa información. Los informes no quedan asociados a la cuenta del Usuario y se usan solo para corregir errores. Google los conserva durante 90 días y luego inicia su eliminación de sus sistemas.</p>
+
     <h3 id="priv-3">3. Cómo utilizamos la información</h3>
     <p>Utilizamos la información recopilada para:</p>
     <ul>
@@ -263,6 +267,7 @@
       <li>Enviar notificaciones locales al Usuario sobre auditorías próximas a vencer o acciones correctivas atrasadas.</li>
       <li>Elaborar estadísticas de uso (cantidad de informes generados y días de uso) para mantener y mejorar la App.</li>
       <li>Diagnosticar errores de la función Recorrido por voz (sección 2.9).</li>
+      <li>Detectar, diagnosticar y corregir fallas de la App mediante los informes de errores descritos en la sección 2.11.</li>
       <li>Mantener y mejorar el funcionamiento de la App.</li>
     </ul>
     <p>No vendemos, alquilamos ni cedemos su información personal ni la de terceros a otras empresas con fines comerciales o publicitarios.</p>
@@ -274,6 +279,7 @@
     <p>Cuando se importa una plantilla con inteligencia artificial, el resultado (nombre, secciones e ítems de la plantilla) se guarda además de forma temporal en la cuenta del Usuario, solo para poder recuperarlo si la App se cierra mientras espera la respuesta. Esa copia se borra apenas la App la recibe y, si nunca la recibe, se borra automáticamente a los 7 días. También se borra al eliminar la cuenta.</p>
     <p>Cuando se arma una auditoría con el Recorrido por voz, se guardan de forma temporal en la cuenta del Usuario: una copia del resultado (para entregarlo si la App se cerró mientras esperaba), que se borra apenas la App guarda la auditoría, y una copia del resultado junto con la respuesta de la IA, para diagnosticar errores de la función. Ambas son texto, nunca audio, y se borran automáticamente a los 7 días o antes, al eliminar la cuenta.</p>
     <p>Las estadísticas de uso descritas en la sección 2.10 también se guardan en la cuenta del Usuario y se borran al eliminarla.</p>
+    <p>Los informes de errores descritos en la sección 2.11 se procesan en Firebase Crashlytics, separados de la cuenta del Usuario; Google los conserva durante 90 días y luego inicia su eliminación.</p>
     <p>El tratamiento de estos datos por parte de Google se rige por la política de privacidad de Google y las condiciones de Firebase. Puede consultarlas en: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></p>
 
     <h3>4.2. Datos en el dispositivo</h3>
@@ -315,7 +321,7 @@
     <h3 id="priv-7">7. Compartir información con terceros</h3>
     <p>No compartimos su información con terceros, salvo:</p>
     <ul>
-      <li><strong>Google Firebase / Google:</strong> como proveedor de la infraestructura de almacenamiento, inicio de sesión y verificación de integridad (App Check y Play Integrity), descrito en las secciones 2.7 y 4.</li>
+      <li><strong>Google Firebase / Google:</strong> como proveedor de la infraestructura de almacenamiento, inicio de sesión, verificación de integridad (App Check y Play Integrity) e informes de errores (Crashlytics), descrito en las secciones 2.7, 2.11 y 4.</li>
       <li><strong>Google (API de Gemini):</strong> únicamente cuando el Usuario utiliza la función de inteligencia artificial, recibe los textos, datos de contexto y fotografías descritos en la sección 2.6 para generar el texto solicitado; al importar una plantilla, las fotos, el PDF o el texto de la planilla que el Usuario eligió; y, al usar el Recorrido por voz, el audio grabado y los datos descritos en la sección 2.9. Todo en las condiciones de la sección 4.3.</li>
       <li><strong>Google Play:</strong> procesa los pagos de planes y paquetes de Créditos IA y le informa a nuestro servidor el estado de cada compra (sección 2.8).</li>
       <li><strong>Cuando la ley lo exija:</strong> si una autoridad competente lo requiere en el marco de un proceso legal válido.</li>
