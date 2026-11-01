@@ -198,7 +198,7 @@
     <h3 id="priv-2">2. Qué información recopilamos</h3>
 
     <h3>2.1. Información de su cuenta (inicio de sesión con Google)</h3>
-    <p>Para utilizar la App, el Usuario inicia sesión mediante su cuenta de Google. A través de este proceso, la App accede a información básica de su cuenta de Google, que puede incluir su nombre, dirección de correo electrónico y foto de perfil. Esta información se utiliza únicamente para identificar su cuenta, permitir el acceso a la App y asociar sus datos a su usuario.</p>
+    <p>Para utilizar la App, el Usuario inicia sesión mediante su cuenta de Google. A través de este proceso, la App accede a información básica de su cuenta de Google, que puede incluir su nombre, dirección de correo electrónico y foto de perfil. Esta información se utiliza únicamente para identificar su cuenta, permitir el acceso a la App y asociar sus datos a su usuario y, en el caso del nombre y el correo electrónico, para enviarle las comunicaciones descritas en la sección 2.12.</p>
     <p>El inicio de sesión es gestionado por Google. La App no accede a su contraseña de Google ni la almacena en ningún momento.</p>
 
     <h3>2.2. Información de su perfil profesional</h3>
@@ -255,6 +255,18 @@
     <p>Para detectar y corregir fallas, cuando la App se cierra por un error, se traba, o encuentra un error que puede manejar sin cerrarse, envía un informe técnico a Firebase Crashlytics, un servicio de Google. El informe incluye: la descripción técnica del error (en qué parte del código ocurrió), el modelo y la marca del dispositivo, la versión de Android, la versión de la App, datos técnicos del dispositivo en ese momento (memoria y espacio libres, orientación de la pantalla, tipo de conexión a internet, si el dispositivo tiene acceso root), el momento en que se abre la App (para calcular qué porcentaje de usos termina sin fallas) y dos identificadores de instalación aleatorios generados por Firebase, que no identifican a una persona ni a un dispositivo y cambian si se reinstala la App.</p>
     <p>Los informes no incluyen la cuenta del Usuario, su correo electrónico ni su nombre, ni datos de clientes, auditorías, capacitaciones, fotos, grabaciones o cualquier texto que el Usuario haya escrito: antes de enviarse, la App borra del mensaje del error todo lo que podría contener esa información. Los informes no quedan asociados a la cuenta del Usuario y se usan solo para corregir errores. Google los conserva durante 90 días y luego inicia su eliminación de sus sistemas.</p>
 
+    <h3>2.12. Comunicaciones por correo electrónico</h3>
+    <p>Usamos la dirección de correo electrónico y el nombre de la cuenta de Google del Usuario (los mismos con los que inicia sesión en AuditApp) para enviarle:</p>
+    <ul>
+      <li>novedades y nuevas funciones de la App,</li>
+      <li>ayuda y consejos para usarla,</li>
+      <li>información importante sobre la App o su cuenta.</li>
+    </ul>
+    <p>Para enviar estos correos usamos Brevo (Sendinblue SAS, Francia), un servicio de envío de correos que trata esos datos solo por nuestra cuenta y siguiendo nuestras instrucciones. Brevo recibe únicamente el correo electrónico y el nombre del Usuario. No recibe sus auditorías, fotografías, clientes ni ningún otro dato de la App.</p>
+    <p>No vendemos el correo electrónico del Usuario ni lo compartimos con terceros con fines publicitarios.</p>
+    <p><strong>Darse de baja:</strong> cada correo incluye un enlace para dejar de recibirlos. El Usuario también puede pedirlo escribiendo a <a href="mailto:auditapp.app@gmail.com">auditapp.app@gmail.com</a>. Darse de baja no afecta el uso de la App.</p>
+    <p>Conservamos el correo electrónico del Usuario en la lista de envíos mientras tenga una cuenta en AuditApp y no se haya dado de baja. Si elimina su cuenta, también lo quitamos de esa lista.</p>
+
     <h3 id="priv-3">3. Cómo utilizamos la información</h3>
     <p>Utilizamos la información recopilada para:</p>
     <ul>
@@ -268,6 +280,7 @@
       <li>Elaborar estadísticas de uso (cantidad de informes generados y días de uso) para mantener y mejorar la App.</li>
       <li>Diagnosticar errores de la función Recorrido por voz (sección 2.9).</li>
       <li>Detectar, diagnosticar y corregir fallas de la App mediante los informes de errores descritos en la sección 2.11.</li>
+      <li>Enviar al Usuario comunicaciones por correo electrónico (novedades, ayuda y avisos importantes sobre la App o su cuenta), que puede dejar de recibir en cualquier momento (sección 2.12).</li>
       <li>Mantener y mejorar el funcionamiento de la App.</li>
     </ul>
     <p>No vendemos, alquilamos ni cedemos su información personal ni la de terceros a otras empresas con fines comerciales o publicitarios.</p>
@@ -293,6 +306,9 @@
 
     <h3>4.4. Pagos (Google Play)</h3>
     <p>Los pagos de planes y paquetes de Créditos IA se procesan exclusivamente mediante el sistema de facturación de Google Play, conforme a las condiciones y la política de privacidad de Google. Puede consultarlas en: <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener">play.google.com/about/play-terms</a> y <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
+
+    <h3>4.5. Envío de correos (Brevo)</h3>
+    <p>El nombre y el correo electrónico que se usan para las comunicaciones descritas en la sección 2.12 se guardan en Brevo (Sendinblue SAS, Francia), que los trata solo por cuenta del Desarrollador y siguiendo sus instrucciones, mientras el Usuario tenga una cuenta en AuditApp y no se haya dado de baja.</p>
 
     <h3 id="priv-5">5. Respaldo, pérdida de datos y responsabilidad del Usuario sobre las imágenes</h3>
     <p>Dado que las fotografías e imágenes (incluidas fotos de auditorías, logos de clientes, logo de empresa, foto de perfil y firma) se guardan únicamente en el dispositivo y <strong>NO</strong> se respaldan en la nube, el Usuario debe tener en cuenta lo siguiente:</p>
@@ -324,6 +340,7 @@
       <li><strong>Google Firebase / Google:</strong> como proveedor de la infraestructura de almacenamiento, inicio de sesión, verificación de integridad (App Check y Play Integrity) e informes de errores (Crashlytics), descrito en las secciones 2.7, 2.11 y 4.</li>
       <li><strong>Google (API de Gemini):</strong> únicamente cuando el Usuario utiliza la función de inteligencia artificial, recibe los textos, datos de contexto y fotografías descritos en la sección 2.6 para generar el texto solicitado; al importar una plantilla, las fotos, el PDF o el texto de la planilla que el Usuario eligió; y, al usar el Recorrido por voz, el audio grabado y los datos descritos en la sección 2.9. Todo en las condiciones de la sección 4.3.</li>
       <li><strong>Google Play:</strong> procesa los pagos de planes y paquetes de Créditos IA y le informa a nuestro servidor el estado de cada compra (sección 2.8).</li>
+      <li><strong>Brevo (Sendinblue SAS, Francia):</strong> como proveedor del envío de las comunicaciones por correo electrónico, recibe únicamente el nombre y el correo electrónico del Usuario y los trata solo por nuestra cuenta (secciones 2.12 y 4.5).</li>
       <li><strong>Cuando la ley lo exija:</strong> si una autoridad competente lo requiere en el marco de un proceso legal válido.</li>
     </ul>
 
@@ -333,7 +350,8 @@
       <li>Acceder a sus datos desde la propia App.</li>
       <li>Modificar o eliminar los clientes, auditorías y demás información que haya cargado, desde la App.</li>
       <li>Cerrar sesión en cualquier momento.</li>
-      <li>Solicitar la eliminación de su cuenta y de los datos asociados almacenados en la nube (incluidas las copias temporales de plantillas importadas y de Recorridos por voz, y las estadísticas de uso), desde la propia App (Configuración → Cuenta) o, si no tiene acceso a ella, siguiendo los pasos detallados en <a href="./borrar-cuenta.html">esta página</a>.</li>
+      <li>Dejar de recibir las comunicaciones por correo electrónico en cualquier momento, con el enlace que incluye cada correo o escribiendo a <a href="mailto:auditapp.app@gmail.com">auditapp.app@gmail.com</a>. Darse de baja no afecta el uso de la App (sección 2.12).</li>
+      <li>Solicitar la eliminación de su cuenta y de los datos asociados almacenados en la nube (incluidas las copias temporales de plantillas importadas y de Recorridos por voz, y las estadísticas de uso), desde la propia App (Configuración → Cuenta) o, si no tiene acceso a ella, siguiendo los pasos detallados en <a href="./borrar-cuenta.html">esta página</a>. Al eliminar la cuenta, su correo electrónico también se quita de la lista de envíos de correos.</li>
     </ul>
     <p>De acuerdo con la normativa aplicable en materia de protección de datos personales (incluida, en Argentina, la Ley N.º 25.326), el Usuario y los titulares de datos personales pueden ejercer sus derechos de acceso, rectificación, actualización y supresión de sus datos.</p>
 
