@@ -2,52 +2,175 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Auditorías de Higiene y Seguridad, simples y profesionales · AuditApp</title>
 <meta name="description" content="AuditApp: checklist con fotos, IA que redacta por vos e informes PDF listos para entregar.">
-<meta name="theme-color" content="#1B3A5C">
+<meta name="theme-color" content="#F6F8FB">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fuentes/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="estilos.css">
+<script src="movimiento.js" defer></script>
 </head>
 <body>
-<nav class="sitio-nav" aria-label="Menú principal">
-  <div class="barra">
-    <a class="marca" href="inicio.html">AuditApp</a>
-    <a href="inicio.html" aria-current="page">Inicio</a>
-    <a href="primeros-pasos.html">Primeros pasos</a>
-    <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
-    <a href="consejos.html">Consejos</a>
-    <a href="legales.html">Legales</a>
-    <a href="contacto.html">Contacto</a>
+<header class="barra">
+  <div class="envoltura">
+    <a class="marca" href="inicio.html"><img src="imagenes/logo.png" width="34" height="34" alt="">AuditApp</a>
+    <nav class="menu-escritorio" aria-label="Menú principal">
+      <a href="inicio.html" aria-current="page">Inicio</a>
+      <a href="primeros-pasos.html">Primeros pasos</a>
+      <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+      <a href="consejos.html">Consejos</a>
+      <a href="legales.html">Legales</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <a class="boton lleno boton-chico" href="https://play.google.com/store/apps/details?id=com.miguel.auditapp">Descargar</a>
+    <details class="menu-movil">
+      <summary aria-label="Abrir el menú"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg></summary>
+      <nav aria-label="Menú principal">
+        <a href="inicio.html" aria-current="page">Inicio</a>
+        <a href="primeros-pasos.html">Primeros pasos</a>
+        <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+        <a href="consejos.html">Consejos</a>
+        <a href="legales.html">Legales</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </details>
   </div>
-</nav>
-<header class="cabecera">
-  <h1>Auditorías de Higiene y Seguridad, simples y profesionales</h1>
-  <p>AuditApp: checklist con fotos, IA que redacta por vos e informes PDF listos para entregar.</p>
 </header>
-<main>
-<section class="tarjeta">
-  <p>AuditApp es la herramienta para técnicos y profesionales de Higiene y Seguridad en el Trabajo que quieren hacer sus auditorías desde el celular y entregar informes de calidad sin pasar horas escribiendo.</p>
-  <ul class="lista-funciones">
-    <li><strong>Checklist por ítems</strong>, con fotos y estados de cumplimiento.</li>
-    <li><strong>Inteligencia artificial</strong> que redacta observaciones, acciones correctivas, conclusiones y recomendaciones.</li>
-    <li><strong>Informes en PDF</strong> listos para entregar, con tu logo y tu firma.</li>
-    <li><strong>Capacitaciones</strong> con hoja de firmas e informe propio.</li>
-    <li><strong>Funciona sin señal</strong>, en pleno campo.</li>
-  </ul>
-</section>
-<p class="centro"><a class="boton" href="https://play.google.com/store/apps/details?id=com.miguel.auditapp">Descargar en Google Play</a></p>
 
-<h2>¿Por dónde empiezo?</h2>
-<div class="enlaces-rapidos">
-  <a href="primeros-pasos.html"><strong>Primeros pasos</strong><span>Tu primer informe en 5 pasos.</span></a>
-  <a href="preguntas-frecuentes.html"><strong>Preguntas frecuentes</strong><span>Datos, fotos, IA, créditos y más.</span></a>
-  <a href="consejos.html"><strong>Consejos</strong><span>Para sacarle el máximo provecho.</span></a>
-  <a href="contacto.html"><strong>Contacto</strong><span>Dudas, sugerencias o errores.</span></a>
-</div>
+<main>
+<section class="portada">
+  <div class="envoltura">
+    <div class="texto" data-aparece>
+      <h1>Auditorías de Higiene y Seguridad, simples y <span class="degrade">profesionales.</span></h1>
+      <p class="bajada">AuditApp: checklist con fotos, IA que redacta por vos e informes PDF listos para entregar.</p>
+      <p class="detalle">La herramienta para técnicos y profesionales de Higiene y Seguridad en el Trabajo que quieren hacer sus auditorías desde el celular y entregar informes de calidad sin pasar horas escribiendo.</p>
+      <div class="botones">
+        <a class="descargar-oficial" href="https://play.google.com/store/apps/details?id=com.miguel.auditapp"><img src="imagenes/google-play.png" width="176" height="68" alt="Descargar en Google Play"></a>
+      </div>
+      <p class="nota"><b>Empezá gratis</b> · 40 créditos de IA de regalo</p>
+    </div>
+
+    <div class="escena" aria-label="Ejemplo del Recorrido por voz">
+      <div class="telefono" data-paralaje="-0.05"><img src="imagenes/captura-resumen.jpg" width="432" height="900" alt="Resumen de una auditoría en AuditApp: gráfico con la distribución de conformes, no conformidades y mejoras."></div>
+      <div class="burbuja voz" data-paralaje="-0.11"><div class="flotar">
+        <div class="quien"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg>Vos, recorriendo<span class="onda" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span></div>
+        <p>“Matafuego del pasillo vencido, sin señalización.”</p>
+      </div></div>
+      <div class="burbuja app" data-paralaje="-0.02"><div class="flotar">
+        <div class="quien"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11 2.5l2.1 5.6 5.6 2.1-5.6 2.1L11 17.9l-2.1-5.6L3.3 10.2l5.6-2.1z"/></svg>AuditApp armó el ítem</div>
+        <div class="item">
+          <span class="lugar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-6.2-6.5-11a6.5 6.5 0 0 1 13 0c0 4.8-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.2"/></svg>Pasillo</span>
+          <h3>Matafuegos con carga vigente y señalizados</h3>
+          <p>Matafuego con la carga vencida y sin señalización.</p>
+          <span class="estado-ia">NC Mayor<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11 2.5l2.1 5.6 5.6 2.1-5.6 2.1L11 17.9l-2.1-5.6L3.3 10.2l5.6-2.1z"/></svg></span>
+        </div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="funciones">
+  <div class="envoltura">
+    <div class="encabezado" data-aparece>
+      <span class="rotulo">Funciones</span>
+      <h2>Del recorrido al informe, <span class="degrade">sin papeles.</span></h2>
+    </div>
+    <div class="grilla">
+      <article class="tarjeta ia" data-aparece>
+        <span class="icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3l1.9 5.1L18 10l-5.1 1.9L11 17l-1.9-5.1L4 10l5.1-1.9z"/><path d="M18.5 14.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></svg></span>
+        <h3>Inteligencia artificial</h3>
+        <p>Redacta observaciones, acciones correctivas, conclusiones y recomendaciones.</p>
+        <span class="boton-ia"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11 2.5l2.1 5.6 5.6 2.1-5.6 2.1L11 17.9l-2.1-5.6L3.3 10.2l5.6-2.1z"/><path d="M18.5 14l.9 2.4 2.4.9-2.4.9-.9 2.4-.9-2.4-2.4-.9 2.4-.9z"/></svg>Mejorar con IA</span>
+      </article>
+      <article class="tarjeta voz" data-aparece>
+        <span class="icono"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg></span>
+        <h3>Recorrido por voz</h3>
+        <p>Hablá mientras recorrés, sacá fotos y la IA arma la auditoría por lugares.</p>
+        <div class="onda-grande" aria-hidden="true"><i style="height:40%"></i><i style="height:75%"></i><i style="height:55%"></i><i style="height:95%"></i><i style="height:60%"></i><i style="height:85%"></i><i style="height:45%"></i><i style="height:70%"></i><i style="height:35%"></i><i style="height:80%"></i><i style="height:50%"></i><i style="height:65%"></i></div>
+      </article>
+      <article class="tarjeta checklist" data-aparece>
+        <span class="icono"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2.5"/><path d="M9 4.5V3h6v1.5"/><path d="M9 12.5l2 2 4-4.5"/></svg></span>
+        <h3>Checklist por ítems</h3>
+        <p>Con fotos y estados de cumplimiento.</p>
+        <div class="estados" aria-label="Estados de cada ítem"><span class="estado c">Conforme</span><span class="estado m">NC Menor</span><span class="estado M">NC Mayor</span><span class="estado j">Mejora</span><span class="estado n">N/A</span></div>
+      </article>
+      <article class="tarjeta pdf" data-aparece>
+        <span class="icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span>
+        <h3>Informes en PDF</h3>
+        <p>Listos para entregar, con tu logo y tu firma.</p>
+      </article>
+      <article class="tarjeta capacitacion" data-aparece>
+        <span class="icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9.5l10-5 10 5-10 5z"/><path d="M6 11.5v4.5c0 1.6 2.7 3 6 3s6-1.4 6-3v-4.5"/><path d="M22 9.5v5"/></svg></span>
+        <h3>Capacitaciones</h3>
+        <p>Con hoja de firmas e informe propio.</p>
+      </article>
+      <article class="tarjeta recordatorios" data-aparece>
+        <span class="icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9a6 6 0 0 1 12 0c0 6 2.5 7.5 2.5 7.5h-17S6 15 6 9z"/><path d="M10 20a2.2 2.2 0 0 0 4 0"/></svg></span>
+        <h3>Recordatorios y acciones correctivas</h3>
+        <p>Avisos de las próximas auditorías y capacitaciones, y seguimiento de cada acción correctiva con su responsable y su plazo.</p>
+        <div class="avisos" aria-label="Ejemplos de avisos">
+          <div class="aviso vencido"><b>Señalización de salidas</b><span>Vencida hace 4 días</span></div>
+          <div class="aviso proximo"><b>Simulacro de evacuación</b><span>Vence en 18 días</span></div>
+        </div>
+      </article>
+      <article class="tarjeta sin-senal" data-aparece>
+        <span class="icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3l18 18"/><path d="M8.7 16.2a5 5 0 0 1 6.1-.5"/><path d="M5.2 12.6a10 10 0 0 1 4.3-2.4"/><path d="M14.6 10.3a10 10 0 0 1 4.2 2.3"/><path d="M1.8 9a15 15 0 0 1 3.6-2.4"/><path d="M9.6 5.2A15 15 0 0 1 22.2 9"/><circle cx="12" cy="19.5" r=".8"/></svg></span>
+        <h3>Funciona sin señal, en pleno campo</h3>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" style="padding-top: 8px">
+  <div class="envoltura">
+    <div class="encabezado" data-aparece>
+      <span class="rotulo">Ayuda</span>
+      <h2>¿Por dónde empiezo?</h2>
+    </div>
+    <div class="accesos">
+      <a class="acceso" data-aparece href="primeros-pasos.html"><div><strong>Primeros pasos</strong><span>Tu primer informe en 5 pasos.</span></div><span class="flecha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="acceso" data-aparece href="preguntas-frecuentes.html"><div><strong>Preguntas frecuentes</strong><span>Datos, fotos, IA, créditos y más.</span></div><span class="flecha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="acceso" data-aparece href="consejos.html"><div><strong>Consejos</strong><span>Para sacarle el máximo provecho.</span></div><span class="flecha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="acceso" data-aparece href="contacto.html"><div><strong>Contacto</strong><span>Dudas, sugerencias o errores.</span></div><span class="flecha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" style="padding-top: 8px">
+  <div class="envoltura">
+    <div class="llamado" data-aparece>
+      <h2>Descargá AuditApp</h2>
+      <p>Checklist con fotos, IA que redacta por vos e informes PDF listos para entregar.</p>
+      <a class="descargar-oficial" href="https://play.google.com/store/apps/details?id=com.miguel.auditapp"><img src="imagenes/google-play.png" width="176" height="68" alt="Descargar en Google Play"></a>
+    </div>
+  </div>
+</section>
 </main>
-<footer>
-  <p>AuditApp · <a href="legales.html">Legales</a> · <a href="contacto.html">Contacto</a></p>
-  <p><a href="mailto:contacto@auditapp.com.ar">contacto@auditapp.com.ar</a> · <a href="https://www.instagram.com/auditapp.app/">Instagram @auditapp.app</a></p>
+
+<footer class="pie">
+  <div class="envoltura">
+    <div style="display:grid; gap:12px">
+      <a class="marca" href="inicio.html"><img src="imagenes/logo.png" width="34" height="34" alt="">AuditApp</a>
+      <p>Auditorías de Higiene y Seguridad, simples y profesionales.</p>
+    </div>
+    <nav class="pie-enlaces" aria-label="Más páginas">
+      <a href="primeros-pasos.html">Primeros pasos</a>
+      <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+      <a href="consejos.html">Consejos</a>
+      <a href="legales.html">Legales</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <div class="contactos">
+      <a href="mailto:contacto@auditapp.com.ar"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>contacto@auditapp.com.ar</a>
+      <a href="https://www.instagram.com/auditapp.app/"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6"/></svg>@auditapp.app</a>
+    </div>
+    <div class="legal">
+      <span>AuditApp — Miguel Ernesto Camarero</span>
+      <span>Sin cookies ni seguimiento.</span>
+    </div>
+  </div>
 </footer>
 </body>
 </html>
