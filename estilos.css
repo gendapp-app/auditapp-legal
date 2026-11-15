@@ -144,7 +144,7 @@ p { margin: 0; }
   border-radius: 16px; box-shadow: 0 2px 6px rgba(13,27,42,.06), 0 22px 44px -18px rgba(13,27,42,.32); padding: 10px 13px 11px;
 }
 .burbuja.voz { order: -1; align-self: flex-start; margin-bottom: -6px; max-width: min(250px, 78%); }
-.burbuja.app { align-self: flex-end; margin-top: -34px; width: min(280px, 84%); }
+.burbuja.app { align-self: flex-end; margin-top: -17px; width: min(280px, 84%); }
 .quien { display: flex; align-items: center; gap: 5px; font-size: .62rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; white-space: nowrap; margin-bottom: 4px; }
 .burbuja.voz .quien { color: var(--azul-medio); }
 .burbuja.app .quien { color: var(--dorado); }
@@ -174,6 +174,52 @@ p { margin: 0; }
   .item h3 { font-size: .96rem; margin-top: 4px; }
   .item p { font-size: .86rem; margin-top: 6px; line-height: 1.45; }
   .estado-ia { margin-top: 10px; font-size: .74rem; padding: 3px 10px; }
+}
+
+/* Carrusel de la portada: cada pantalla es una escena (teléfono + sus dos burbujas) en una fila que
+   se desliza. El deslizamiento con el dedo es el del navegador (anda sin JavaScript); movimiento.js
+   suma el paso automático, el arrastre con el mouse y los puntitos. La fila recorta lo que se sale de
+   ella, así que se estira 20 px a cada lado (el margen de la página: en el celular llega al borde de la
+   pantalla) y 50 px hacia abajo, para que las sombras del teléfono y las burbujas no queden cortadas en
+   un rectángulo. Entre pantallas hay el doble de ese margen, para que la de al lado no asome. Las
+   pantallas se deslizan enteras, una al lado de la otra; solo esos 20 px de los costados se esfuman
+   (máscara), así cada pantalla se desvanece al llegar al borde en vez de cortarse en línea recta. */
+.carrusel { position: relative; min-width: 0; }
+.pistas {
+  display: flex; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory;
+  scrollbar-width: none; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch;
+  gap: 40px; padding: 10px 20px 80px; margin: 0 -20px -50px; scroll-padding-inline: 20px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 20px, #000 calc(100% - 20px), transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 20px, #000 calc(100% - 20px), transparent);
+}
+.pistas::-webkit-scrollbar { display: none; }
+.diapo { flex: 0 0 100%; min-width: 0; scroll-snap-align: center; scroll-snap-stop: always; padding-inline: 8px; }
+.pistas.arrastrando { scroll-snap-type: none; cursor: grabbing; user-select: none; -webkit-user-select: none; }
+@media (hover: hover) and (pointer: fine) { .pistas { cursor: grab; } }
+.carrusel img { -webkit-user-drag: none; }
+.puntos { position: relative; z-index: 1; display: flex; justify-content: center; gap: 2px; margin-top: -14px; }
+.puntos[hidden] { display: none; }
+.puntos button { width: 28px; height: 28px; padding: 0; border: 0; background: none; cursor: pointer; display: grid; place-items: center; }
+.puntos button::before { content: ""; width: 8px; height: 8px; border-radius: 999px; background: rgba(13, 27, 42, .22); transition: width .25s ease, background-color .25s ease; }
+.puntos button[aria-current="true"]::before { width: 22px; background: var(--azul); }
+.puntos button:focus-visible { outline: 3px solid var(--azul-medio); outline-offset: -4px; border-radius: 999px; }
+/* Contenido propio de las pantallas 2 a 4. */
+.item .campo { display: block; font-size: .62rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--tinta-2); }
+.item .campo.pac { color: var(--rojo); margin-top: 6px; }
+.item .campo + p { margin-top: 2px; }
+.item h3 { overflow-wrap: anywhere; }
+.burbuja.app.sin-ia .quien { color: var(--verde); }
+.burbuja .avisos { margin-top: 2px; gap: 6px; }
+.burbuja .aviso { padding: 7px 10px; border-radius: 11px; font-size: .74rem; }
+@media (min-width: 900px) {
+  .diapo { padding-inline: 4px; }
+  .diapo .burbuja.voz { left: 0; }
+  /* La burbuja de abajo se monta sobre el teléfono la mitad de su alto (su borde de abajo arranca en el
+     borde del teléfono y baja la mitad de su alto); el espacio de abajo de la escena le deja lugar. */
+  .diapo.escena { padding-bottom: 120px; }
+  .diapo .burbuja.app { right: 0; bottom: 120px; translate: 0 50%; }
+  .item .campo { font-size: .68rem; }
+  .burbuja .aviso { font-size: .82rem; padding: 8px 12px; }
 }
 
 /* Secciones */
